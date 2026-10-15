@@ -1,11 +1,13 @@
 const express = require('express');
 const sequelize = require('./config/database');
+const path = require('path');
 
 require('dotenv').config();
 
 const app = express();
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 const usuarioRoutes = require('./routes/usuarioRoutes');
 const authRoutes = require('./routes/authRoutes');

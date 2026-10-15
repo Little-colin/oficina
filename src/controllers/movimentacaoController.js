@@ -19,7 +19,10 @@ async function cadastrar(req, res) {
             });
         }
 
-        const novaQuantidade =
+        let novaQuantidade;
+
+        if (novaQuantidade > 0) {
+            const novaQuantidade =
             tipo === 'entrada'
                 ? livro.quantidade_estoque + quantidade
                 : livro.quantidade_estoque - quantidade;
@@ -27,6 +30,13 @@ async function cadastrar(req, res) {
         await livro.update({
             quantidade_estoque: novaQuantidade,
         });
+        } else {
+            return res.status(400).json({
+                mensagem: 'Quantidade imprópria para movimentação',
+            });
+        }
+
+        
 
         const movimentacao = await Movimentacao.create({
             livro_id,
