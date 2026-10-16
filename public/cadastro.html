@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro |  Readmin Franklin</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="pagina-login">
+ 
+  <div class="cartao caixa-login">
+    <div class="icone">🐦‍🔥</div>
+    <h1>Readmin Franklin</h1>
+    <p class="subtitulo">Cadastre-se</p>
+ 
+    <form id="form-login">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" placeholder="exemplo@dominio.com" required>
+ 
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" placeholder="••••••••" required>
+
+      <label for="tipo-perfil">Tipo de perfil</label>
+      <select id="tipo-perfil" required>
+        <option value="">Selecione...</option>
+        <option value="administrador">Administrador</option>
+        <option value="operador">Operador</option>
+      </select>
+
+      <button type="submit" class="botao">Entrar</button>
+    </form>
+  </div>
+ 
+</body>
+</html>

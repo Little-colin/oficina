@@ -93,6 +93,10 @@ h2 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   margin-bottom: 24px;
 }
+
+.ativo {
+  background: var(--cor-principal-escura);
+}
  
 /* ========== 5. FORMULÁRIOS ========== */
 label {
@@ -133,7 +137,12 @@ select:focus {
   cursor: pointer; 
   /* faz o mouse virar a mãozinha */
 }
- 
+
+.botao_secundario {
+  background: transparent; 
+  border: 2px solid;
+  color: var(--cor-principal);
+}
 .botao:hover {
   background: var(--cor-principal-escura);
 }
@@ -303,4 +312,61 @@ tr:hover td {
     font-size: 1.5rem;
     /* deixa o texto com 1,5 vez o tamanho da fonte base da página. 1rem equivale 16px */
   }
+}
+
+/* ========== 13. AJUSTES PARA MODO ESCURO========== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-principal: #22c55e;
+    --cor-principal-escura: #16a34a;
+    --cor-destaque: #facc15;
+    --cor-fundo: #0f172a;
+    --cor-cartao: #1e293b;
+    --cor-texto: #f8fafc;
+  }
+
+  input, select {
+    background: #334155;
+    color: var(--cor-texto);
+  }
+}
+
+/* ========== 14. IDs ========== */
+
+#nome, #email, #senha, #tipo-perfil {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+#form-login, #form-livro, #form-movimentacao {
+  margin-bottom: 16px;
+}
+
+#link-sair {
+  font-size: 0.9rem;
+  color: #64748b;
+  text-decoration: none;
+}
+
+#titulo {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+#autor {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+#quantidade-estoque {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+#busca-nome, #botao-buscar, #lista-livros, #mensagem, #botao-anterior, #botao-proxima, #livro-id, #tipo, #quantidade, #lista-movimentacoes {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 16px;
 }
